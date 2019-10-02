@@ -1,0 +1,40 @@
+diff --git a/node_modules/styled-icons/StyledIconBase/StyledIconBase.esm.js b/node_modules/styled-icons/StyledIconBase/StyledIconBase.esm.js
+index 5c949627..39b0078b 100644
+--- a/node_modules/styled-icons/StyledIconBase/StyledIconBase.esm.js
++++ b/node_modules/styled-icons/StyledIconBase/StyledIconBase.esm.js
+@@ -1,6 +1,6 @@
+ import { __assign, __makeTemplateObject, __rest } from "tslib";
+ import * as React from 'react';
+-import styled from 'styled-components';
++import styled from '@emotion/styled';
+ import validProp from '@emotion/is-prop-valid';
+ function isValidProp(key) {
+     return validProp(key);
+@@ -23,5 +23,5 @@ var StyledIconBaseBase = React.forwardRef(function (props, ref) {
+         title && React.createElement("title", { key: "icon-title" }, title),
+         children));
+ });
+-export var StyledIconBase = styled(StyledIconBaseBase).withConfig({ displayName: "StyledIconBase", componentId: "sc-bdy9j4" })(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: inline-block;\n  vertical-align: ", ";\n  overflow: hidden;\n"], ["\n  display: inline-block;\n  vertical-align: ", ";\n  overflow: hidden;\n"])), function (props) { return props.iconVerticalAlign; });
++export var StyledIconBase = styled(StyledIconBaseBase)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: inline-block;\n  vertical-align: ", ";\n  overflow: hidden;\n"], ["\n  display: inline-block;\n  vertical-align: ", ";\n  overflow: hidden;\n"])), function (props) { return props.iconVerticalAlign; });
+ var templateObject_1;
+diff --git a/node_modules/styled-icons/StyledIconBase/StyledIconBase.js b/node_modules/styled-icons/StyledIconBase/StyledIconBase.js
+index ee3d0dea..3f4c580d 100644
+--- a/node_modules/styled-icons/StyledIconBase/StyledIconBase.js
++++ b/node_modules/styled-icons/StyledIconBase/StyledIconBase.js
+@@ -2,7 +2,7 @@
+ Object.defineProperty(exports, "__esModule", { value: true });
+ var tslib_1 = require("tslib");
+ var React = tslib_1.__importStar(require("react"));
+-var styled_components_1 = tslib_1.__importDefault(require("styled-components"));
++var styled_components_1 = tslib_1.__importDefault(require("@emotion/styled"));
+ var is_prop_valid_1 = tslib_1.__importDefault(require("@emotion/is-prop-valid"));
+ function isValidProp(key) {
+     return is_prop_valid_1.default(key);
+@@ -25,5 +25,5 @@ var StyledIconBaseBase = React.forwardRef(function (props, ref) {
+         title && React.createElement("title", { key: "icon-title" }, title),
+         children));
+ });
+-exports.StyledIconBase = styled_components_1.default(StyledIconBaseBase).withConfig({ displayName: "StyledIconBase", componentId: "sc-bdy9j4" })(templateObject_1 || (templateObject_1 = tslib_1.__makeTemplateObject(["\n  display: inline-block;\n  vertical-align: ", ";\n  overflow: hidden;\n"], ["\n  display: inline-block;\n  vertical-align: ", ";\n  overflow: hidden;\n"])), function (props) { return props.iconVerticalAlign; });
++exports.StyledIconBase = styled_components_1.default(StyledIconBaseBase)(templateObject_1 || (templateObject_1 = tslib_1.__makeTemplateObject(["\n  display: inline-block;\n  vertical-align: ", ";\n  overflow: hidden;\n"], ["\n  display: inline-block;\n  vertical-align: ", ";\n  overflow: hidden;\n"])), function (props) { return props.iconVerticalAlign; });
+ var templateObject_1;
+\ No newline at end of file

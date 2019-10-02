@@ -1,0 +1,13 @@
+diff --git a/node_modules/@types/react/index.d.ts b/node_modules/@types/react/index.d.ts
+index 9d3bc30..2e51076 100644
+--- a/node_modules/@types/react/index.d.ts
++++ b/node_modules/@types/react/index.d.ts
+@@ -82,7 +82,7 @@ declare namespace React {
+         readonly current: T | null;
+     }
+ 
+-    type Ref<T> = { bivarianceHack(instance: T | null): void }["bivarianceHack"] | RefObject<T> | null;
++    type Ref<T> = ((instance: any) => void) | RefObject<T>
+     type LegacyRef<T> = string | Ref<T>;
+ 
+     type ComponentState = any;

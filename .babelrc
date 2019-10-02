@@ -1,0 +1,29 @@
+{
+  "env": {
+    "production": {
+      "plugins": [["emotion", { "sourceMap": false }]]
+    },
+    "development": {
+      "plugins": [["emotion", { "sourceMap": true }]]
+    }
+  },
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-env": {
+          "useBuiltIns": "entry",
+          "corejs": 3,
+          "exclude": [
+            "transform-typeof-symbol",
+            "transform-async-to-generator",
+            "transform-regenerator"
+          ]
+        },
+        "styled-jsx": {},
+        "transform-runtime": { "regenerator": false }
+      }
+    ]
+  ],
+  "plugins": ["emotion",  "lodash"]
+}

@@ -1,0 +1,20 @@
+diff --git a/node_modules/next/dist/next-server/lib/loadable.js b/node_modules/next/dist/next-server/lib/loadable.js
+index f731dc5..645002b 100644
+--- a/node_modules/next/dist/next-server/lib/loadable.js
++++ b/node_modules/next/dist/next-server/lib/loadable.js
+@@ -212,13 +212,13 @@ function createLoadableComponent(loadFn, options) {
+             }
+             render() {
+                 if (this.state.loading || this.state.error) {
+-                    return react_1.default.createElement(opts.loading, {
++                    return react_1.default.createElement(opts.loading, Object.assign({}, this.props,{
+                         isLoading: this.state.loading,
+                         pastDelay: this.state.pastDelay,
+                         timedOut: this.state.timedOut,
+                         error: this.state.error,
+                         retry: this.retry
+-                    });
++                    }));
+                 }
+                 else if (this.state.loaded) {
+                     return opts.render(this.state.loaded, this.props);
