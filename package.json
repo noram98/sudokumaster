@@ -19,7 +19,7 @@
     "@styled-system/should-forward-prop": "^5.1.2",
     "deepmerge": "^4.0.0",
     "emotion-theming": "^10.0.19",
-    "next": "^9.0.6",
+    "next": "^9.3.2",
     "nprogress": "^0.2.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
